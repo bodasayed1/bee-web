@@ -175,7 +175,7 @@ nav ul {
 .head-btn {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  /* padding: 8px 16px; */
+  padding: 8px 16px;
   border-radius: var(--radius-full);
   transition: all 0.3s var(--bounce);
   background: var(--honey);
@@ -282,7 +282,7 @@ h1 {
 }
 
 .hero-p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: var(--brown);
   max-width: 460px;
   line-height: 1.7;
@@ -532,7 +532,7 @@ h1 {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(1.7rem, 5vw, 2.8rem);
   font-weight: 800;
   color: var(--dark);
   line-height: 1.2;
@@ -1260,6 +1260,10 @@ h1 {
     box-shadow 0.3s;
   outline: none;
 }
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--honey);
+    box-shadow: 0 0 0 4px rgba(255, 186, 8, 0.15);
+}
 
 .btn-submit {
   align-self: flex-start;
@@ -1320,5 +1324,171 @@ h1 {
   a {
     color: var(--honey);
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 10px 10px;
+
+    nav {
+      display: none;
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    .bee-icon {
+      font-size: 1.3rem;
+    }
+    .head-btn {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+    }
+  }
+
+  .container {
+    padding: 120px 12px;
+  }
+
+  body {
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+  .hero {
+    .hero-honeycomb {
+      display: none;
+    }
+
+    .hero-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      .hero-badge {
+        padding: 6px 12px;
+      }
+      .highlight::after {
+        height: 6px;
+      }
+
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-btns {
+        gap: 12px;
+      }
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 22px;
+      }
+      .hero-floating-bee {
+        right: -5px;
+      }
+    }
+    .scroll-hint {
+      bottom: 12px;
+    }
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-right p {
+    font-size: 0.9rem;
+  }
+  .about-stats {
+    display: flex;
+    justify-content: center;
+  }
+  .stat-item {
+    padding: 16px 20px;
+
+    .stat-number {
+      font-size: 1.6rem;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+    }
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 200px;
+  }
+
+  .skill-card {
+    min-height: 200px;
+  }
+
+  .work-sec .projects-list {
+    gap: 35px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: unset;
+    direction: ltr;
+  }
+
+  .project-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .project-card-img {
+    clip-path: none;
+    min-height: 220px;
+  }
+
+  .project-card:nth-child(even) .project-card-img {
+    clip-path: none;
+  }
+
+  .project-info {
+    padding: 26px 22px 28px;
+  }
+
+  .edu-cards {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .exp-card {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-card-img {
+    min-height: 220px;
+  }
+
+  .exp-card-body {
+    padding: 26px 22px 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-submit {
+  align-self: center;}
+
+  .contact-methods {
+    gap: 14px;
   }
 }
